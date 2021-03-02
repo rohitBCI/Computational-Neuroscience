@@ -25,6 +25,7 @@ n_max = [np.max(np.mean(ni, axis=0)) for ni in n]
 arg = np.divide([rr.mean() for rr in r], n_max)
 
 popultion = np.multiply(np.transpose(c), arg)
+
 popultion = popultion.sum(axis=1)
 angle = np.arctan(-popultion[0] / popultion[1])
 answer = 180 - angle * 180.0 / np.pi
